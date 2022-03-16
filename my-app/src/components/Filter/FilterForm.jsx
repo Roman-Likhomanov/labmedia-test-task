@@ -3,9 +3,7 @@ import { useState } from "react";
 import './../Users/users.css';
 import search from "./../../icons/search.svg"
 
-const FilterForm = ({ filterUsers}) => {
-
-    const [filterValue, setFilterValue] = useState('');
+const FilterForm = ({ filterUsers, filterValue, setFilterValue}) => {
     
     const keyupHandler = (e) => {
         e.preventDefault();

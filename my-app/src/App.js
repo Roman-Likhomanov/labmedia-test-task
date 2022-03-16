@@ -130,6 +130,7 @@ const App = () => {
       popupActive={popupActive}
       setPopupActive={setPopupActive}
       clearButton={clearButton}
+      reset={reset}
       setReset={setReset}
       setClearButton={setClearButton}
     />

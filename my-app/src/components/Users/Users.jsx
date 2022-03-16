@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ClearFilter from '../ClearFilter/ClearFilter';
 import DeleteUserPopup from '../DeleteUser/DeleteUserPopup';
 import FilterForm from '../Filter/FilterForm';
@@ -26,7 +26,10 @@ let Users = ({ filtered,
     setPopupActive,
     clearButton,
     setReset,
+    reset,
     setClearButton }) => {
+
+    const [filterValue, setFilterValue] = useState('');
 
     const fieldSortDataDate = (field) => {
         sortData(field);
@@ -43,11 +46,13 @@ let Users = ({ filtered,
     return <div className="container">
         <h1>Список пользователей</h1>
         <div className="filter">
-            <FilterForm filterUsers={filterUsers} />
+            <FilterForm filterValue={filterValue} setFilterValue={setFilterValue} filterUsers={filterUsers} />
             {clearButton ? <ClearFilter setReset={setReset}
+                reset={reset}
                 setClearButton={setClearButton}
                 setSortDate={setSortDate}
                 setSortRating={setSortRating}
+                setFilterValue={setFilterValue}
             /> : null}
         </div>
         <div className="sort">
