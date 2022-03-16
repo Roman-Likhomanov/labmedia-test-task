@@ -1,0 +1,289 @@
+.container {
+	padding: 12px 12px 0 27px;
+	font-family: "Inter";
+	font-weight: 500;
+	font-style: normal;
+	background-color: #F7F7F7;
+}
+
+.container h1 {
+	font-weight: 700;
+	line-height: 28px;
+	font-size: 24px;
+	color: #333333;
+	margin-top: 12px;
+	margin-bottom: 20px;
+}
+
+.filter {
+	display: flex;
+	flex-direction: column;
+	width: 961px;
+	height: 102px;
+	background-color: #FFFFFF;
+	border-radius: 7px;
+	box-shadow: 0px 18px 15px 0px rgba(0, 0, 0, 0.08);
+}
+
+.search {
+	display: flex;
+	border-radius: 4px;
+	width: 901px;
+	Height: 34px;
+	background-color: #ECEFF0;
+	margin: 12px 44px 24px 16px;
+}
+
+.search__icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 4px;
+	margin-left: 3px;
+	order: -1;
+	align-self: center;
+}
+
+.search__field {
+	width: 300px;
+	border: none;
+	outline: none;
+	background-color: #ECEFF0;
+}
+
+.search__field::-webkit-input-placeholder {
+	color: #9EAAB4;
+	font-family: "Inter";
+	font-weight: 500;
+	line-height: 16px;
+	font-size: 12px;
+}
+
+.search__field::-moz-placeholder {
+	color: #9EAAB4;
+	font-family: "Inter";
+	font-weight: 500;
+	line-height: 16px;
+	font-size: 12px;
+}
+
+.search__field:-ms-input-placeholder {
+	color: #9EAAB4;
+	font-family: "Inter";
+	font-weight: 500;
+	line-height: 16px;
+	font-size: 12px;
+}
+
+.search__field:-moz-placeholder {
+	color: #9EAAB4;
+	font-family: "Inter";
+	font-weight: 500;
+	line-height: 16px;
+	font-size: 12px;
+}
+
+.clearFilter {
+	display: flex;
+	line-height: 16px;
+	font-size: 12px;
+	color: #4F4F4F;
+	margin: 0px 0px 0px 16px;
+}
+
+.clearFilter p {
+	margin: 0px;
+	align-self: center;
+}
+
+.clearFilter img {
+	width: 16px;
+	height: 16px;
+}
+
+.sort {
+	display: flex;
+	flex-direction: row;
+	line-height: 14px;
+	font-size: 10px;
+	color: #9EAAB4;
+	gap: 8px;
+	margin: 72px 0px 15px 0px;
+}
+
+.sort p {
+	margin: 0px;
+}
+
+.sort div {
+	border-bottom: dashed 1px;
+}
+
+.sort div.active {
+	color: #333333;
+}
+
+.sort div:hover:not(.active) {
+	color: #9EAAB4;
+}
+
+.containerTable {
+	width: 961px;
+	height: 311.528px;
+	background-color: #FFFFFF;
+	border-radius: 7px;
+	margin-bottom: 20px;
+}
+
+.table {
+	width: 927px;
+	border-collapse: separate;
+	background-color: #FFFFFF;
+	border-spacing: 0px 20px;
+	margin-left: 16px;
+}
+
+.table thead {
+	line-height: 14px;
+	font-size: 10px;
+	color: #9EAAB4;
+}
+
+.table tbody {
+	line-height: 16px;
+	font-size: 12px;
+	color: #ACACAC;
+}
+
+.tdName {
+	width: 246px;
+}
+
+.tdMail {
+	width: 249px;
+}
+
+.tdDate {
+	width: 240px;
+}
+
+.name {
+	font-weight: 700;
+	line-height: 16px;
+	font-size: 12px;
+	color: #0CB4F1;
+}
+
+.table tbody td {
+	border-top: 1px solid #dddddd;
+	padding: 0px;
+	vertical-align: bottom;
+	height: 30px;
+}
+
+
+
+.table td img {
+	width: 15px;
+	height: 15px;
+	vertical-align: bottom;
+}
+
+ul.pagination {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	line-height: 16px;
+	font-size: 12px;
+}
+
+ul.pagination li {
+	display: inline;
+}
+
+ul.pagination li a {
+	color: #9EAAB4;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color .3s;
+	border: 1px solid #ddd;
+}
+
+ul.pagination li a.active {
+	background-color: #0CB4F1;
+	color: white;
+	border: 1px solid #0CB4F1;
+}
+
+ul.pagination li a:hover:not(.active) {
+	background-color: #ddd;
+}
+
+.popup {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: 0.5s;
+	pointer-events: none;
+}
+
+.popup p {
+	line-height: 14.52px;
+	font-size: 12px;
+	font-weight: 400;
+	text-align: center;
+	margin-top: 36px;
+	margin-bottom: 24px;
+}
+
+.popup.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.popup__content {
+	border-radius: 8px;
+	background-color: white;
+	height: 134px;
+	width: 353px;
+	transform: scale(0.5);
+	transition: 0.4s all;
+}
+
+.popup__content.active {
+	transform: scale(1);
+}
+
+.popup__form {
+	display: flex;
+	justify-content: center;
+	gap: 36px;
+}
+
+.popup__form input[type="submit"] {
+	background-color: #E0E0E0;
+	border: none;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-webkit-appearance: none;
+	color: #828282;
+	cursor: pointer;
+	float: none;
+	margin-bottom: 32px;
+	width: 88px;
+	height: 27px;
+
+}
+
+.popup__form input[type="submit"]:hover {
+	background-color: #0CB4F1;
+	color: white;
+}
