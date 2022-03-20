@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+## Тестовое задание "Верстка и программирование таблицы пользователей"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Что сделано?
+:white_check_mark: Страница сверстана согласно макету.  
+:white_check_mark: Реализован поиск пользователей по имени пользователя или e-mail адресу:  
+- Доступна возможность ввода запроса для поиска пользователя по имени пользователя либо по e-mail адресу.  
+- Поиск осуществляется при совпадении введенного запроса с полями  «username» или «email» без учёта регистра.  
+:white_check_mark: Реализована сортировка таблицы:  
+- При нажатии на «Дата регистрации» в сортировке список сортируется по дате регистрации от наибольшей даты к наименьшей, при повторном нажатии на активное поле сортировки дата список сортируется по дате от наименьшей даты к наибольшей.  
+- При нажатии на «Рейтинг» в сортировке список сортируется по полю «Рейтинг» по возрастанию/убыванию аналогично полю «Дата регистрации».  
+:white_check_mark: Реализована кнопка очистить фильтр:  
+- Появляется при активном поиске, либо после применения сортировки по любому из полей  
+- При нажатии на кнопку выполняется сброс фильтр поиска и сортировки  
+:white_check_mark: Реализована пагинация. На странице отображается по 5 пользователей, есть возможность переходить между страницами.  
+:white_check_mark: Возможность удаления пользователя из таблицы  
+- При нажатии на крестик выводится модальное окно с фразой «Вы уверены, что хотите удалить пользователя» и кнопки «Да», «Нет»  
+- При нажатии на «Нет», модальное окно закрывается  
+- При нажатии на «Да» пользователь удаляется из таблицы на стороне клиента (при обновлении страницы он снова отображается)  
+- При использовании фильтров после удаления пользователя, он не показывается в списках
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://roman-likhomanov.github.io/labmedia-test-task/

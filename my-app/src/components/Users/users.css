@@ -1,9 +1,12 @@
+body {
+	background-color: #F7F7F7;	
+}
+
 .container {
 	padding: 12px 12px 0 27px;
 	font-family: "Inter";
 	font-weight: 500;
 	font-style: normal;
-	background-color: #F7F7F7;
 }
 
 .container h1 {
