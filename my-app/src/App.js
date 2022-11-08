@@ -27,6 +27,7 @@ const App = () => {
         setUsers(response.data);
       });
   }, [reset]);
+  console.log(users)
 
   useEffect(() => {
     setFiltered(users);
