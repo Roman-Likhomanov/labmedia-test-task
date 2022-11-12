@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import './../Users/users.css';
 import search from "./../../icons/search.svg"
 

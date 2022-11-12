@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ClearFilter from '../ClearFilter/ClearFilter';
 import DeleteUserPopup from '../DeleteUser/DeleteUserPopup';
 import FilterForm from '../Filter/FilterForm';
@@ -6,28 +6,30 @@ import Paginator from '../Paginator/Paginator';
 import User from './User';
 import './users.css';
 
-let Users = ({ filtered,
-    sortData,
-    activeSort,
-    sortDate,
-    setSortDate,
-    sortRating,
-    setSortRating,
-    filterUsers,
-    pages,
-    currentPage,
-    onNextClick,
-    onPreviousClick,
-    currentPageActive,
-    currentPageNumber,
-    setDeleteUser,
-    getDeleteUser,
-    popupActive,
-    setPopupActive,
-    clearButton,
-    setReset,
-    reset,
-    setClearButton }) => {
+let Users = ({
+                 currentBlockRows,
+                 sortData,
+                 activeSort,
+                 sortDate,
+                 setSortDate,
+                 sortRating,
+                 setSortRating,
+                 filterUsers,
+                 pages,
+                 currentPage,
+                 onNextClick,
+                 onPreviousClick,
+                 currentPageNumber,
+                 setDeleteUser,
+                 getDeleteUser,
+                 popupActive,
+                 setPopupActive,
+                 clearButton,
+                 setReset,
+                 setClearButton,
+                 users,
+                 setFiltered
+             }) => {
 
     const [filterValue, setFilterValue] = useState('');
 
@@ -46,50 +48,56 @@ let Users = ({ filtered,
     return <div className="container">
         <h1>Список пользователей</h1>
         <div className="filter">
-            <FilterForm filterValue={filterValue} setFilterValue={setFilterValue} filterUsers={filterUsers} />
+            <FilterForm filterValue={filterValue} setFilterValue={setFilterValue} filterUsers={filterUsers}/>
             {clearButton ? <ClearFilter setReset={setReset}
-                reset={reset}
-                setClearButton={setClearButton}
-                setSortDate={setSortDate}
-                setSortRating={setSortRating}
-                setFilterValue={setFilterValue}
+                                        setClearButton={setClearButton}
+                                        setSortDate={setSortDate}
+                                        setSortRating={setSortRating}
+                                        setFilterValue={setFilterValue}
+                                        users={users}
+                                        setFiltered={setFiltered}
             /> : null}
         </div>
         <div className="sort">
             <p>Сортировка:</p>
-            <div className={sortDate ? activeSort : null} onClick={() => { fieldSortDataDate('registration_date') }}>Дата регистрации</div>
-            <div className={sortRating ? activeSort : null} onClick={() => { fieldSortDataRating('rating') }}>Рейтинг</div>
+            <div className={sortDate ? "active" : null} onClick={() => {
+                fieldSortDataDate('registration_date')
+            }}>Дата регистрации
+            </div>
+            <div className={sortRating ? "active" : null} onClick={() => {
+                fieldSortDataRating('rating')
+            }}>Рейтинг
+            </div>
         </div>
         <div className="containerTable">
             <table className="table">
                 <thead>
-                    <tr>
-                        <td className="tdName">Имя пользователя</td>
-                        <td className="tdMail">E-mail</td>
-                        <td className="tdDate">Дата регистрации</td>
-                        <td>Рейтинг</td>
-                        <td> </td>
-                    </tr>
+                <tr>
+                    <td className="tdName">Имя пользователя</td>
+                    <td className="tdMail">E-mail</td>
+                    <td className="tdDate">Дата регистрации</td>
+                    <td>Рейтинг</td>
+                    <td></td>
+                </tr>
                 </thead>
                 <tbody>
-                    {
-                        filtered.map(e => <User user={e}
-                            setPopupActive={setPopupActive}
-                            setDeleteUser={setDeleteUser}
-                            key={e.username}
-                        />)
-                    }
+                {
+                    currentBlockRows.map(e => <User user={e}
+                                                    setPopupActive={setPopupActive}
+                                                    setDeleteUser={setDeleteUser}
+                                                    key={e.username}
+                    />)
+                }
                 </tbody>
             </table>
         </div>
         <Paginator pages={pages}
-            currentPage={currentPage}
-            onNextClick={onNextClick}
-            onPreviousClick={onPreviousClick}
-            currentPageActive={currentPageActive}
-            currentPageNumber={currentPageNumber} />
+                   currentPage={currentPage}
+                   onNextClick={onNextClick}
+                   onPreviousClick={onPreviousClick}
+                   currentPageNumber={currentPageNumber}/>
         <DeleteUserPopup popupActive={popupActive} setPopupActive={setPopupActive}
-            getDeleteUser={getDeleteUser} />
+                         getDeleteUser={getDeleteUser}/>
     </div>
 }
 

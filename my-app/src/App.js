@@ -7,18 +7,15 @@ const App = () => {
 
   const [users, setUsers] = useState([]);
   const [directionSort, setDirectionSort] = useState(true);
-  const [activeSort, setActiveSort] = useState('');
   const [sortDate, setSortDate] = useState(false);
   const [sortRating, setSortRating] = useState(false);
   const [filtered, setFiltered] = useState([]);
   const [totalCountRows, setTotalCountRows] = useState(0);
   const [totalCountPages, setTotalCountPages] = useState(0);
   const [currentPageNumber, setCurrentPageNumber] = useState(1);
-  const [currentPageActive, setCurrentPageActive] = useState('');
   const [deleteUser, setDeleteUser] = useState({});
   const [popupActive, setPopupActive] = useState(false);
   const [clearButton, setClearButton] = useState(false);
-  const [reset, setReset] = useState(false);
   const limitCountPage = 5;
 
   useEffect(() => {
@@ -26,8 +23,7 @@ const App = () => {
       .then(response => {
         setUsers(response.data);
       });
-  }, [reset]);
-  console.log(users)
+  }, []);
 
   useEffect(() => {
     setFiltered(users);
@@ -45,7 +41,6 @@ const App = () => {
 
   const currentPage = (pg) => {
     setCurrentPageNumber(pg);
-    setCurrentPageActive("active");
   }
  
   const lastBlockRow = currentPageNumber * limitCountPage;
@@ -68,7 +63,6 @@ const App = () => {
 
   const sortData = (field) => {
     setClearButton(true);
-    setActiveSort("active");
 
     const copyData = users.concat();
     let sortCopy;
@@ -89,10 +83,10 @@ const App = () => {
 
   const filterUsers = (filterValue) => {
     if (!filterValue) {
-      return;
+      setFiltered(users)
     } else {
       setClearButton(true);
-      return setFiltered(
+      setFiltered(
         users.filter(
           el => {
             return (el.username.toLowerCase().includes(filterValue.toLowerCase())
@@ -102,6 +96,7 @@ const App = () => {
         )
       )
     }
+    setCurrentPageNumber(1)
   }
 
   const getDeleteUser = () => {
@@ -113,27 +108,25 @@ const App = () => {
   return <>
     <Users
       sortData={sortData}
-      activeSort={activeSort}
       sortDate={sortDate}
       setSortDate={setSortDate}
       sortRating={sortRating}
       setSortRating={setSortRating}
       filterUsers={filterUsers}
-      filtered={currentBlockRows}
+      currentBlockRows={currentBlockRows}
       pages={pages}
       currentPage={currentPage}
       onNextClick={onNextClick}
       onPreviousClick={onPreviousClick}
-      currentPageActive={currentPageActive}
       currentPageNumber={currentPageNumber}
       setDeleteUser={setDeleteUser}
       getDeleteUser={getDeleteUser}
       popupActive={popupActive}
       setPopupActive={setPopupActive}
       clearButton={clearButton}
-      reset={reset}
-      setReset={setReset}
       setClearButton={setClearButton}
+      users={users}
+      setFiltered={setFiltered}
     />
   </>
 }

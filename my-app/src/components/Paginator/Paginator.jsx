@@ -1,7 +1,7 @@
 import React from 'react';
 import './../Users/users.css';
 
-const Paginator = ({ pages, currentPage, onNextClick, onPreviousClick, currentPageActive, currentPageNumber }) => {
+const Paginator = ({ pages, currentPage, onNextClick, onPreviousClick, currentPageNumber }) => {
     return (
         <div>
             <ul className="pagination">
@@ -10,7 +10,7 @@ const Paginator = ({ pages, currentPage, onNextClick, onPreviousClick, currentPa
                 </li>
                 {pages.map(p => {
                     return <li key={p}>
-                        <a className={(currentPageNumber === p) ? currentPageActive : null} href="#" onClick={() => { currentPage(p) }}>{p}</a>
+                        <a className={(currentPageNumber === p) ? "active" : null} href="#" onClick={() => { currentPage(p) }}>{p}</a>
                     </li>
                 })
                 }
