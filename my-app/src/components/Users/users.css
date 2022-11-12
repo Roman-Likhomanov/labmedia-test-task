@@ -135,7 +135,7 @@ body {
 
 .containerTable {
 	width: 961px;
-	height: 311.528px;
+	min-height: 311.528px;
 	background-color: #FFFFFF;
 	border-radius: 7px;
 	margin-bottom: 20px;
@@ -146,7 +146,7 @@ body {
 	border-collapse: separate;
 	background-color: #FFFFFF;
 	border-spacing: 0px 20px;
-	margin-left: 16px;
+	margin: 0 16px 0 16px;
 }
 
 .table thead {
