@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/labmedia-test-task/static/css/main.68582a17.css",
+    "main.css": "/labmedia-test-task/static/css/main.9768a753.css",
     "main.js": "/labmedia-test-task/static/js/main.25f4beed.js",
     "static/js/787.28cb0dcd.chunk.js": "/labmedia-test-task/static/js/787.28cb0dcd.chunk.js",
     "static/media/clean.svg": "/labmedia-test-task/static/media/clean.be9d9d48eb1fcba6dd772afd6727814e.svg",
     "index.html": "/labmedia-test-task/index.html",
     "static/media/search.svg": "/labmedia-test-task/static/media/search.c89c138163ace84fb915936c3657c6ce.svg",
     "static/media/cancel.svg": "/labmedia-test-task/static/media/cancel.626fac77f605ead2111c664b65e18c42.svg",
-    "main.68582a17.css.map": "/labmedia-test-task/static/css/main.68582a17.css.map",
+    "main.9768a753.css.map": "/labmedia-test-task/static/css/main.9768a753.css.map",
     "main.25f4beed.js.map": "/labmedia-test-task/static/js/main.25f4beed.js.map",
     "787.28cb0dcd.chunk.js.map": "/labmedia-test-task/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.68582a17.css",
+    "static/css/main.9768a753.css",
     "static/js/main.25f4beed.js"
   ]
 }
